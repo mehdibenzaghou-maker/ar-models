@@ -1,71 +1,146 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sebs Garden — Menu</title>
-  <link rel="stylesheet" href="assets/styles.css">
+  <title>Seb's Garden — Cuisine raffinée en 3D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <header class="site-header">
-    <button id="openMenu" class="hamburger">☰</button>
-    <div class="brand">
-      <div class="logo">SG</div>
-      <div class="title">Sebs Garden</div>
+    <div class="container">
+      <h1 class="brand">Seb's Garden</h1>
+      <p class="tagline">Cuisine raffinée en 3D</p>
+      <nav class="nav">
+        <a href="#accueil">Accueil</a>
+        <a href="#plats">Nos plats en 3D</a>
+        <a href="#apropos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <nav class="top-nav">
-      <button id="menuBtn" class="menu-btn">Menu</button>
-    </nav>
   </header>
 
-  <section class="hero">
-    <img src="assets/img/hero1.jpg" alt="hero">
-    <h1>BIENVENUE CHEZ SEBS GARDEN</h1>
-  </section>
-
-  <div class="category-bar" id="categoryBar">
-    <a href="#salade" class="cat active">Salade</a>
-    <a href="#pizza" class="cat">Pizza</a>
-  </div>
-
-  <main class="content">
-    <section id="salade" class="menu-section">
-      <h2>Salade</h2>
-      <div class="item">
-        <img class="thumb" src="assets/img/menu_hero.jpg" alt="salade">
-        <div class="meta">
-          <h3>Salade Maison</h3>
-          <p class="desc">Salade fraîche, roquette, noix, vinaigrette maison.</p>
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>Bienvenue au Seb's Garden</h2>
+          <p>Expérience culinaire immersive — découvrez nos plats en 3D avant de commander.</p>
+          <div class="hero-cta">
+            <a class="btn btn-gold" href="#plats">Voir le menu 3D</a>
+            <a class="btn btn-outline" href="#contact">Nous contacter</a>
+          </div>
         </div>
-        <div class="actions">
-          <!-- model-viewer shows the 3D preview (replace model.glb with your real file) -->
-          <model-viewer src="models/sample.glb" alt="salad 3d" camera-controls ar ar-modes="webxr scene-viewer quick-look" ios-src="models/sample.usdz" class="preview"></model-viewer>
-          <a class="ar-btn" rel="ar" href="models/sample.usdz">Open in AR</a>
+        <div class="hero-visual">
+          <!-- Decorative 3D sample -->
+          <model-viewer alt="Plat échantillon" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+            ar ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+            camera-controls auto-rotate exposure="1" shadow-intensity="0.8" loading="lazy"
+            class="mv-sample"></model-viewer>
         </div>
       </div>
     </section>
 
-    <section id="pizza" class="menu-section">
-      <h2>Pizza</h2>
-      <div class="item">
-        <img class="thumb" src="assets/img/menu_hero.jpg" alt="pizza">
-        <div class="meta">
-          <h3>Pizza Margherita</h3>
-          <p class="desc">Tomato, mozzarella, basilic frais.</p>
-        </div>
-        <div class="actions">
-          <model-viewer src="models/sample.glb" alt="pizza 3d" camera-controls ar ar-modes="webxr scene-viewer quick-look" ios-src="models/sample.usdz" class="preview"></model-viewer>
-          <a class="ar-btn" rel="ar" href="models/sample.usdz">Open in AR</a>
-        </div>
+    <section id="plats" class="plats">
+      <div class="container section-header">
+        <h3>Nos plats en 3D</h3>
+        <p>Placeholders — remplacez les fichiers 3D par vos modèles (.glb/.usdz) plus tard.</p>
+      </div>
+
+      <div class="container plats-grid">
+        <!-- Dish 1 -->
+        <article class="dish-card">
+          <div class="dish-preview">
+            <model-viewer alt="Plat 1" src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb"
+              ar ios-src="https://modelviewer.dev/shared-assets/models/RobotExpressive.glb"
+              camera-controls auto-rotate loading="lazy"></model-viewer>
+          </div>
+          <div class="dish-info">
+            <h4>Plat 1</h4>
+            <p class="price">€—</p>
+            <p class="desc">Description courte (placeholder).</p>
+            <div class="dish-actions">
+              <a class="btn btn-gold" href="#">Voir en AR</a>
+              <a class="btn btn-outline" href="#">Ajouter</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dish 2 -->
+        <article class="dish-card">
+          <div class="dish-preview">
+            <model-viewer alt="Plat 2" src="https://modelviewer.dev/shared-assets/models/FlightHelmet.glb"
+              ar ios-src="https://modelviewer.dev/shared-assets/models/FlightHelmet.glb"
+              camera-controls auto-rotate loading="lazy"></model-viewer>
+          </div>
+          <div class="dish-info">
+            <h4>Plat 2</h4>
+            <p class="price">€—</p>
+            <p class="desc">Description courte (placeholder).</p>
+            <div class="dish-actions">
+              <a class="btn btn-gold" href="#">Voir en AR</a>
+              <a class="btn btn-outline" href="#">Ajouter</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dish 3 -->
+        <article class="dish-card">
+          <div class="dish-preview">
+            <model-viewer alt="Plat 3" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+              ar ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+              camera-controls auto-rotate loading="lazy"></model-viewer>
+          </div>
+          <div class="dish-info">
+            <h4>Plat 3</h4>
+            <p class="price">€—</p>
+            <p class="desc">Description courte (placeholder).</p>
+            <div class="dish-actions">
+              <a class="btn btn-gold" href="#">Voir en AR</a>
+              <a class="btn btn-outline" href="#">Ajouter</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="apropos" class="apropos">
+      <div class="container">
+        <h3>À propos</h3>
+        <p>Ce site est un modèle élégant et moderne. Modifiez les textes, images et modèles 3D depuis votre dépôt GitHub.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h3>Contact</h3>
+        <p>Coordonnées laissées vides — à remplir par vos soins.</p>
+        <form class="contact-form" onsubmit="return false;">
+          <label>Nom</label>
+          <input placeholder="Votre nom" />
+          <label>Email</label>
+          <input placeholder="Votre email" />
+          <label>Message</label>
+          <textarea placeholder="Votre message"></textarea>
+          <div class="form-actions">
+            <button class="btn btn-gold" type="button">Envoyer</button>
+            <button class="btn btn-outline" type="button">Réserver</button>
+          </div>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© Sebs Garden</p>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Seb's Garden — Tous droits réservés.</p>
+    </div>
   </footer>
 
-  <script src="assets/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
