@@ -1,233 +1,103 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Seb's Garden — Menu 3D</title>
-  <link rel="stylesheet" href="styles.css">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seb's Garden – Nos plats en 3D</title>
+  <link rel="icon" href="favicon.ico" />
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background-color: #0b1b33; color: #f4d47b; }
+
+    nav {
+      position: fixed; top: 0; left: 0; width: 100%;
+      background-color: #0f2454; padding: 15px 40px;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 1000;
+    }
+    nav h1 { font-size: 1.5rem; color: #f4d47b; }
+    nav ul { list-style: none; display: flex; gap: 30px; }
+    nav ul li a {
+      color: #f4d47b; text-decoration: none; font-weight: 500;
+    }
+    nav ul li a:hover { text-decoration: underline; }
+
+    section { padding: 100px 40px; min-height: 100vh; scroll-margin-top: 100px; }
+
+    #home {
+      background: #0b1b33;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center;
+    }
+    #home h2 { font-size: 2.5rem; color: #f4d47b; margin-bottom: 15px; }
+    #home p { max-width: 600px; color: #e6e6e6; }
+
+    #menu h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      justify-items: center;
+    }
+    model-viewer {
+      width: 100%; height: 400px;
+      background-color: #0f2454;
+      border: 2px solid #f4d47b; border-radius: 10px;
+    }
+
+    #contact h2 { text-align: center; font-size: 2rem; margin-bottom: 20px; }
+    #contact p { text-align: center; color: #e6e6e6; }
+
+    footer { text-align: center; padding: 20px; background-color: #0f2454; color: #f4d47b; }
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <div class="brand">Seb's Garden</div>
-      <nav class="nav">
-        <button id="menuToggle" class="btn btn-ghost">Menu</button>
-      </nav>
+  <nav>
+    <h1>Seb's Garden</h1>
+    <ul>
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h2>Bienvenue à Seb's Garden</h2>
+    <p>Dégustez nos plats raffinés en 3D et découvrez une expérience unique.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Nos plats en 3D</h2>
+    <div class="menu-grid">
+      <model-viewer
+        src="https://pub-xxxxxx.r2.dev/ete-en-provence.glb"
+        ios-src="https://pub-xxxxxx.r2.dev/ete-en-provence.usdz"
+        ar ar-modes="webxr scene-viewer quick-look"
+        camera-controls auto-rotate
+        alt="Été en Provence">
+      </model-viewer>
+
+      <model-viewer
+        src="https://pub-xxxxxx.r2.dev/pizza-roma.glb"
+        ios-src="https://pub-xxxxxx.r2.dev/pizza-roma.usdz"
+        ar ar-modes="webxr scene-viewer quick-look"
+        camera-controls auto-rotate
+        alt="Pizza Roma">
+      </model-viewer>
     </div>
-  </header>
+  </section>
 
-  <main class="main">
-    <section class="hero">
-      <div class="hero-inner container">
-        <h1>Bienvenue à Seb's Garden</h1>
-        <p class="subtitle">Cuisine moderne — expériences en 3D</p>
-        <div class="hero-actions">
-          <button id="discoverBtn" class="btn btn-primary">Découvrir le menu</button>
-        </div>
-      </div>
-    </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Adresse : 123 Rue de la Cuisine, Paris 75001<br>
+       Téléphone : +33 1 23 45 67 89<br>
+       Email : contact@sebsgarden.com</p>
+  </section>
 
-    <section class="about container">
-      <h2>Notre concept</h2>
-      <p>Site démo moderne — minimal et prêt pour intégrer des modèles 3D interactifs. Remplacez les placeholders par vos fichiers <code>.glb</code> et <code>.usdz</code>.</p>
-    </section>
-  </main>
-
-  <!-- Full screen menu overlay -->
-  <div id="menuOverlay" class="menu-overlay" aria-hidden="true">
-    <div class="overlay-inner container" role="dialog" aria-modal="true" aria-label="Menu Seb's Garden">
-      <div class="overlay-header">
-        <h2>Le Menu</h2>
-        <button id="closeOverlay" class="btn btn-ghost">Fermer ✕</button>
-      </div>
-
-      <div class="sections-grid">
-        <section class="menu-section">
-          <h3>Entrées froides <span class="count">8</span></h3>
-          <div class="items-grid" id="entrees-froides">
-            <!-- 8 placeholders -->
-                        <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-          </div>
-        </section>
-
-        <section class="menu-section">
-          <h3>Entrées chaudes <span class="count">7</span></h3>
-          <div class="items-grid" id="entrees-chaudes">
-                        <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-          </div>
-        </section>
-
-        <section class="menu-section">
-          <h3>Nos spécialités camemberts <span class="count">4</span></h3>
-          <div class="items-grid" id="camemberts">
-                        <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-            <article class="dish-card">
-              <div class="viewer">
-                <model-viewer class="mv" data-src="" data-ios-src="" alt="Placeholder 3D"
-                  camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-                <div class="viewer-overlay"><img src="assets/placeholder.svg" alt=""></div>
-              </div>
-              <div class="dish-meta"><h4 class="dish-name">–</h4></div>
-            </article>
-          </div>
-        </section>
-      </div>
-
-      <footer class="overlay-footer">
-        <small>Remplacez <code>data-src</code> (GLB) et <code>data-ios-src</code> (USDZ) puis ajoutez le nom du plat.</small>
-      </footer>
-    </div>
-    <div class="overlay-backdrop" id="overlayBackdrop"></div>
-  </div>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© Seb's Garden 2025 — Tous droits réservés</small>
-    </div>
+  <footer>
+    © 2025 Seb’s Garden – Tous droits réservés
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
