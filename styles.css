@@ -1,0 +1,68 @@
+
+/* Sebs Garden styles - deep blue + gold palette */
+:root{
+  --deep-blue:#14214a; /* adjusted from image */
+  --gold:#c99a2a;
+  --muted:#222;
+  --card:#0f1724;
+  --text:#e7d9b5;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: 'Georgia', serif;
+  background:var(--deep-blue);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 16px;
+  background:linear-gradient(180deg, rgba(0,0,0,0.6), transparent);
+  position:sticky;
+  top:0;
+  z-index:20;
+  backdrop-filter: blur(6px);
+}
+
+.hamburger{font-size:20px;background:transparent;border:none;color:var(--text)}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{
+  width:44px;height:44px;border-radius:6px;background:var(--gold);display:flex;align-items:center;justify-content:center;color:var(--deep-blue);font-weight:bold
+}
+.title{font-size:16px;letter-spacing:1px}
+
+.hero{position:relative;text-align:center}
+.hero img{width:100%;height:260px;object-fit:cover;filter:brightness(0.6)}
+.hero h1{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  font-size:28px;color:var(--text);letter-spacing:3px;font-family: 'Playfair Display', serif;
+}
+
+.category-bar{display:flex;gap:12px;padding:18px;overflow:auto;margin:12px;border-radius:14px;background:rgba(0,0,0,0.35);width:calc(100% - 48px);margin-left:24px;margin-right:24px}
+.cat{padding:12px 18px;border-radius:8px;background:rgba(255,255,255,0.03);color:var(--text);text-decoration:none}
+.cat.active{background:var(--gold);color:var(--deep-blue);font-weight:600}
+
+.content{padding:20px}
+.menu-section{margin-bottom:40px}
+.menu-section h2{font-size:26px;color:var(--gold);margin-bottom:14px}
+
+.item{display:flex;align-items:center;gap:14px;padding:16px;border-radius:12px;background:rgba(0,0,0,0.3);box-shadow:0 2px 0 rgba(0,0,0,0.6)}
+.thumb{width:82px;height:82px;border-radius:8px;object-fit:cover;border:4px solid rgba(255,255,255,0.03)}
+.meta{flex:1}
+.meta h3{margin:0 0 6px 0}
+.desc{margin:0;color:#bfbfbf}
+.actions{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.preview{width:120px;height:90px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.04)}
+.ar-btn{display:inline-block;padding:8px 12px;background:var(--gold);color:var(--deep-blue);border-radius:8px;text-decoration:none;font-weight:600}
+
+.site-footer{padding:20px;text-align:center;color:#bfbfbf}
+@media(min-width:800px){
+  .hero img{height:420px}
+  .hero h1{font-size:48px}
+  .item{padding:20px}
+}

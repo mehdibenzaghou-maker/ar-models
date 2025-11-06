@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sebs Garden — Menu</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <button id="openMenu" class="hamburger">☰</button>
+    <div class="brand">
+      <div class="logo">SG</div>
+      <div class="title">Sebs Garden</div>
+    </div>
+    <nav class="top-nav">
+      <button id="menuBtn" class="menu-btn">Menu</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="assets/img/hero1.jpg" alt="hero">
+    <h1>BIENVENUE CHEZ SEBS GARDEN</h1>
+  </section>
+
+  <div class="category-bar" id="categoryBar">
+    <a href="#salade" class="cat active">Salade</a>
+    <a href="#pizza" class="cat">Pizza</a>
+  </div>
+
+  <main class="content">
+    <section id="salade" class="menu-section">
+      <h2>Salade</h2>
+      <div class="item">
+        <img class="thumb" src="assets/img/menu_hero.jpg" alt="salade">
+        <div class="meta">
+          <h3>Salade Maison</h3>
+          <p class="desc">Salade fraîche, roquette, noix, vinaigrette maison.</p>
+        </div>
+        <div class="actions">
+          <!-- model-viewer shows the 3D preview (replace model.glb with your real file) -->
+          <model-viewer src="models/sample.glb" alt="salad 3d" camera-controls ar ar-modes="webxr scene-viewer quick-look" ios-src="models/sample.usdz" class="preview"></model-viewer>
+          <a class="ar-btn" rel="ar" href="models/sample.usdz">Open in AR</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="pizza" class="menu-section">
+      <h2>Pizza</h2>
+      <div class="item">
+        <img class="thumb" src="assets/img/menu_hero.jpg" alt="pizza">
+        <div class="meta">
+          <h3>Pizza Margherita</h3>
+          <p class="desc">Tomato, mozzarella, basilic frais.</p>
+        </div>
+        <div class="actions">
+          <model-viewer src="models/sample.glb" alt="pizza 3d" camera-controls ar ar-modes="webxr scene-viewer quick-look" ios-src="models/sample.usdz" class="preview"></model-viewer>
+          <a class="ar-btn" rel="ar" href="models/sample.usdz">Open in AR</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© Sebs Garden</p>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
