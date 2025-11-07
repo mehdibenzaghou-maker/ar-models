@@ -1,42 +1,33 @@
-// Overlay open/close logic, progressive model-viewer src assign, keyboard accessibility
+// Menu dropdown toggle + close on outside click + progressive enhancement for model-viewer data-src
 document.addEventListener('DOMContentLoaded', function(){
-  const menuToggle = document.getElementById('menuToggle');
-  const discoverBtn = document.getElementById('discoverBtn');
-  const overlay = document.getElementById('menuOverlay');
-  const closeBtn = document.getElementById('closeOverlay');
-  const backdrop = document.getElementById('overlayBackdrop');
+  const menuBtn = document.getElementById('menuBtn');
+  const menuDropdown = document.getElementById('menuDropdown');
 
-  function openOverlay(){
-    overlay.setAttribute('aria-hidden','false');
-    document.body.style.overflow = 'hidden';
+  function openMenu(){
+    menuDropdown.setAttribute('aria-hidden','false');
   }
-  function closeOverlay(){
-    overlay.setAttribute('aria-hidden','true');
-    document.body.style.overflow = '';
+  function closeMenu(){
+    menuDropdown.setAttribute('aria-hidden','true');
   }
-
-  menuToggle.addEventListener('click', openOverlay);
-  discoverBtn.addEventListener('click', openOverlay);
-  closeBtn.addEventListener('click', closeOverlay);
-  backdrop.addEventListener('click', closeOverlay);
-
-  // Close with ESC
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape') closeOverlay();
+  menuBtn.addEventListener('click', function(e){
+    const hidden = menuDropdown.getAttribute('aria-hidden') === 'true';
+    if(hidden) openMenu(); else closeMenu();
   });
 
-  // Move data-src/data-ios-src to src/ios-src for model-viewer to load when present.
-  const setSrcs = () => {
-    const viewers = document.querySelectorAll('model-viewer.mv');
-    viewers.forEach(v => {
-      const ds = v.getAttribute('data-src');
-      const ios = v.getAttribute('data-ios-src');
-      if(ds && !v.getAttribute('src')) v.setAttribute('src', ds);
-      if(ios && !v.getAttribute('ios-src')) v.setAttribute('ios-src', ios);
-    });
-  };
+  // Close when clicking outside
+  document.addEventListener('click', function(e){
+    const target = e.target;
+    if(!menuDropdown.contains(target) && target !== menuBtn){
+      closeMenu();
+    }
+  });
 
-  // Call once on open to allow lazy assignment if you want to keep models unloaded until menu visible.
-  menuToggle.addEventListener('click', setSrcs);
-  discoverBtn.addEventListener('click', setSrcs);
+  // Progressive: if model-viewer elements have data-src attributes, move them to src so model-viewer loads them.
+  const viewers = document.querySelectorAll('model-viewer.model-viewer-placeholder');
+  viewers.forEach(v => {
+    const dataSrc = v.getAttribute('data-src');
+    const iosSrc = v.getAttribute('data-ios-src');
+    if(dataSrc) v.setAttribute('src', dataSrc);
+    if(iosSrc) v.setAttribute('ios-src', iosSrc);
+  });
 });

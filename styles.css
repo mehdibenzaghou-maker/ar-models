@@ -1,67 +1,49 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #0a1a2f;
-  color: #f5d76e;
+:root{
+  --bg:#0b2340; /* dark blue */
+  --gold:#c9a227; /* golden dark yellow */
+  --muted:rgba(255,255,255,0.85);
+  --card:#0f2b4a;
 }
 
-header {
-  background-color: #0a1a2f;
-  color: #f5d76e;
-  text-align: center;
-  padding: 60px 20px;
-}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;color:var(--muted);background:var(--bg);-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{border-bottom:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg, rgba(11,35,64,0.95), rgba(11,35,64,0.9));position:sticky;top:0;z-index:50}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem 1rem}
+.brand .logo{font-weight:700;color:var(--gold);font-size:1.2rem;letter-spacing:0.6px}
+.nav-btn{background:transparent;border:2px solid var(--gold);color:var(--gold);padding:0.5rem 0.8rem;border-radius:6px;cursor:pointer;font-weight:600}
+.nav-btn:hover{background:rgba(201,162,39,0.08)}
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  background-color: #0e223d;
-  padding: 15px;
-}
+.menu-dropdown{position:fixed;left:0;right:0;top:76px;margin:auto;display:none;pointer-events:none;transition:opacity 260ms ease, transform 260ms ease;opacity:0;transform:translateY(-8px)}
+.menu-dropdown[aria-hidden="false"]{display:block;pointer-events:auto;opacity:1;transform:translateY(0)}
+.menu-content{background:linear-gradient(180deg, rgba(15,43,74,0.98), rgba(7,21,38,0.98));border:1px solid rgba(201,162,39,0.08);padding:1.25rem;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.menu-content h2{color:var(--gold);margin:0 0 0.5rem 0}
+.menu-section{margin-top:1rem;padding:0.75rem;border-top:1px dashed rgba(255,255,255,0.03)}
+.menu-section h3{margin:0 0 0.5rem 0;color:var(--gold);display:flex;align-items:center;gap:0.6rem}
+.menu-section .count{font-size:0.9rem;color:rgba(255,255,255,0.6);font-weight:600}
 
-nav a {
-  color: #f5d76e;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
+.items-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0.9rem;margin-top:0.75rem}
+.dish{background:var(--card);padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.02);display:flex;flex-direction:column;gap:0.5rem;min-height:180px;align-items:stretch}
+.dish-info{display:flex;justify-content:space-between;align-items:center}
+.dish-name{margin:0;color:var(--gold);font-weight:700}
 
-nav a:hover {
-  color: white;
-}
+.viewer-wrap{flex:1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-radius:6px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+.model-viewer-placeholder{width:100%;height:100%;min-height:120px;background:transparent;display:flex;align-items:center;justify-content:center;}
 
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
+/* overlay shows in absence of an actual model */
+.overlay{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0.95;padding:10px}
+.overlay img{width:48px;height:48px;opacity:0.95}
+.overlay-text{font-size:0.8rem;color:rgba(255,255,255,0.8)}
 
-h2 {
-  border-bottom: 2px solid #f5d76e;
-  display: inline-block;
-  padding-bottom: 10px;
-  margin-bottom: 40px;
-}
+.menu-footer{margin-top:1rem;padding-top:0.5rem;border-top:1px dashed rgba(255,255,255,0.03);font-size:0.85rem;color:rgba(255,255,255,0.6)}
 
-.model-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-}
+.main.container{padding:2.5rem 1rem}
+h1{color:var(--gold);margin-top:1rem}
+p{color:rgba(255,255,255,0.85);max-width:74ch}
 
-model-viewer {
-  width: 250px;
-  height: 250px;
-  background-color: #142f4d;
-  border-radius: 10px;
+/* Responsive tweaks */
+@media (max-width:560px){
+  .site-header .container{padding:0.75rem}
+  .menu-dropdown{top:64px}
+  .items-grid{grid-template-columns:repeat(1,1fr)}
 }
-
-footer {
-  background-color: #0e223d;
-  text-align: center;
-  padding: 20px;
-  color: #f5d76e;
-  margin-top: 50px;
-}
-

@@ -1,24 +1,23 @@
-# Seb's Garden — Modern Minimal (v2)
+# Seb's Garden — One-page demo (Menu 3D placeholders)
 
-This package contains a polished one-page site (French) designed to be uploaded to GitHub Pages.
-Files:
-- index.html
-- styles.css
-- script.js
-- assets/placeholder.svg
+Contenu fourni:
+- `index.html` — page principale (FR)
+- `styles.css` — styles (thème : bleu foncé + doré)
+- `script.js` — interactions (dropdown, fermeture auto)
+- `assets/placeholder.svg` — petite icône placeholder pour les slots
+- `README.md` — ce fichier
 
-Features:
-- Modern / minimal UI (dark blue + gold accent)
-- Hero section (blank background so you can add your own image later)
-- Full-screen menu overlay with 3 sections:
-  1. Entrées froides (8 slots)
-  2. Entrées chaudes (7 slots)
-  3. Nos spécialités camemberts (4 slots)
-- Each slot includes a `<model-viewer>` ready for `data-src` (GLB) and `data-ios-src` (USDZ).
-- Overlay supports closing via backdrop click, Esc key, and "Fermer" button.
-- To add your models: set `data-src` to your .glb URL and `data-ios-src` to your .usdz URL, e.g.:
-  `<model-viewer data-src="3d/plat1.glb" data-ios-src="3d/plat1.usdz"></model-viewer>`
-- Replace `<h4 class="dish-name">–</h4>` with the dish name in French.
+Instructions rapides:
+1. Déployez ces fichiers sur GitHub Pages ou dans le dossier `docs/` d'un repo.
+2. Pour chaque slot (chaque élément `.dish`), remplacez l'attribut `data-src` par le chemin vers votre fichier `.glb` et `data-ios-src` par votre fichier `.usdz`. Par exemple:
+   ```html
+   <model-viewer data-src="3d/ete-en-provence.glb" data-ios-src="3d/ete-en-provence.usdz" ...></model-viewer>
+   ```
+   Le script déplacera automatiquement `data-src` → `src` pour charger le modèle.
+3. Les boutons AR apparaîtront automatiquement dans `<model-viewer>` lorsque le périphérique les supporte.
+4. Tous les emplacements sont vides: remplacez aussi le contenu `<h4 class="dish-name">–</h4>` par le nom du plat.
 
-Deploy:
-- Upload to GitHub and enable GitHub Pages, or push to the `docs/` folder in your repo. The site is static and uses only vanilla HTML/CSS/JS.
+Notes:
+- Le dropdown se ferme automatiquement si l'utilisateur clique en dehors.
+- L'ouverture du menu utilise une animation douce (déplacement + fondu).
+- Texte en français, prêt pour GitHub.
