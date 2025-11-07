@@ -3,101 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seb's Garden – Nos plats en 3D</title>
-  <link rel="icon" href="favicon.ico" />
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
-    html { scroll-behavior: smooth; }
-    body { background-color: #0b1b33; color: #f4d47b; }
-
-    nav {
-      position: fixed; top: 0; left: 0; width: 100%;
-      background-color: #0f2454; padding: 15px 40px;
-      display: flex; justify-content: space-between; align-items: center;
-      z-index: 1000;
-    }
-    nav h1 { font-size: 1.5rem; color: #f4d47b; }
-    nav ul { list-style: none; display: flex; gap: 30px; }
-    nav ul li a {
-      color: #f4d47b; text-decoration: none; font-weight: 500;
-    }
-    nav ul li a:hover { text-decoration: underline; }
-
-    section { padding: 100px 40px; min-height: 100vh; scroll-margin-top: 100px; }
-
-    #home {
-      background: #0b1b33;
-      display: flex; flex-direction: column; justify-content: center; align-items: center;
-      text-align: center;
-    }
-    #home h2 { font-size: 2.5rem; color: #f4d47b; margin-bottom: 15px; }
-    #home p { max-width: 600px; color: #e6e6e6; }
-
-    #menu h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
-    .menu-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
-      justify-items: center;
-    }
-    model-viewer {
-      width: 100%; height: 400px;
-      background-color: #0f2454;
-      border: 2px solid #f4d47b; border-radius: 10px;
-    }
-
-    #contact h2 { text-align: center; font-size: 2rem; margin-bottom: 20px; }
-    #contact p { text-align: center; color: #e6e6e6; }
-
-    footer { text-align: center; padding: 20px; background-color: #0f2454; color: #f4d47b; }
-  </style>
+  <title>Seb's Garden</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Bienvenue chez Seb's Garden</h1>
+    <p>Découvrez nos plats en 3D</p>
+  </header>
+
   <nav>
-    <h1>Seb's Garden</h1>
-    <ul>
-      <li><a href="#home">Accueil</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="index.html">Accueil</a>
+    <a href="menu.html">Menu 3D</a>
   </nav>
 
-  <section id="home">
-    <h2>Bienvenue à Seb's Garden</h2>
-    <p>Dégustez nos plats raffinés en 3D et découvrez une expérience unique.</p>
-  </section>
-
-  <section id="menu">
-    <h2>Nos plats en 3D</h2>
-    <div class="menu-grid">
-      <model-viewer
-        src="https://pub-xxxxxx.r2.dev/ete-en-provence.glb"
-        ios-src="https://pub-xxxxxx.r2.dev/ete-en-provence.usdz"
-        ar ar-modes="webxr scene-viewer quick-look"
-        camera-controls auto-rotate
-        alt="Été en Provence">
-      </model-viewer>
-
-      <model-viewer
-        src="https://pub-xxxxxx.r2.dev/pizza-roma.glb"
-        ios-src="https://pub-xxxxxx.r2.dev/pizza-roma.usdz"
-        ar ar-modes="webxr scene-viewer quick-look"
-        camera-controls auto-rotate
-        alt="Pizza Roma">
-      </model-viewer>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Adresse : 123 Rue de la Cuisine, Paris 75001<br>
-       Téléphone : +33 1 23 45 67 89<br>
-       Email : contact@sebsgarden.com</p>
+  <section>
+    <h2>Notre univers culinaire</h2>
+    <p>Découvrez des créations culinaires raffinées, visualisables en 3D avant même de les déguster.</p>
+    <br>
+    <a href="menu.html" style="color:#f5d76e; font-weight:bold;">Voir le Menu 3D →</a>
   </section>
 
   <footer>
-    © 2025 Seb’s Garden – Tous droits réservés
+    <p>© 2025 Seb's Garden - Tous droits réservés</p>
   </footer>
 </body>
 </html>
