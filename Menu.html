@@ -3,122 +3,85 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu 3D - Seb's Garden</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  <title>Seb’s Garden - Menu</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
 </head>
 <body>
   <header>
-    <h1>Nos plats en 3D</h1>
+    <nav class="navbar">
+      <h1 class="logo">Seb’s Garden</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="menu.html">Menu 3D</a>
-  </nav>
+  <main class="menu-container">
+    <h2>Notre Menu 3D</h2>
 
-  <!-- Entrées froides -->
-  <section>
-    <h2>Entrées froides</h2>
-    <div class="dish">
-      <h3>Salade César</h3>
-      <model-viewer id="model1"
-        src="https://example-bucket.r2.cloudflarestorage.com/entree_froide_1.glb"
-        ios-src="https://example-bucket.r2.cloudflarestorage.com/entree_froide_1.usdz"
-        camera-controls auto-rotate ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-      <div class="buttons">
-        <button class="androidBtn" data-model="model1">Voir en 3D</button>
-        <button class="iosBtn" data-usdz="https://example-bucket.r2.cloudflarestorage.com/entree_froide_1.usdz">Voir en AR</button>
+    <section class="menu-section">
+      <h3>Entrées froides</h3>
+      <div class="dish">
+        <img src="assets/placeholder.jpg" alt="Entrée froide">
+        <div class="dish-info">
+          <h4>Entrée froide 1</h4>
+          <div class="buttons">
+            <button onclick="view3D('assets/demo.glb')">Voir en 3D</button>
+            <button onclick="viewAR('assets/demo.usdz')">Voir en AR</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Entrées chaudes -->
-  <section>
-    <h2>Entrées chaudes</h2>
-    <div class="dish">
-      <h3>Soupe à l’oignon</h3>
-      <model-viewer id="model2"
-        src="https://example-bucket.r2.cloudflarestorage.com/entree_chaude_1.glb"
-        ios-src="https://example-bucket.r2.cloudflarestorage.com/entree_chaude_1.usdz"
-        camera-controls auto-rotate ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-      <div class="buttons">
-        <button class="androidBtn" data-model="model2">Voir en 3D</button>
-        <button class="iosBtn" data-usdz="https://example-bucket.r2.cloudflarestorage.com/entree_chaude_1.usdz">Voir en AR</button>
+    <section class="menu-section">
+      <h3>Entrées chaudes</h3>
+      <div class="dish">
+        <img src="assets/placeholder.jpg" alt="Entrée chaude">
+        <div class="dish-info">
+          <h4>Entrée chaude 1</h4>
+          <div class="buttons">
+            <button onclick="view3D('assets/demo.glb')">Voir en 3D</button>
+            <button onclick="viewAR('assets/demo.usdz')">Voir en AR</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Pizzas -->
-  <section>
-    <h2>Pizzas</h2>
-    <div class="dish">
-      <h3>Pizza Truffe</h3>
-      <model-viewer id="model3"
-        src="https://example-bucket.r2.cloudflarestorage.com/pizza_1.glb"
-        ios-src="https://example-bucket.r2.cloudflarestorage.com/pizza_1.usdz"
-        camera-controls auto-rotate ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-      <div class="buttons">
-        <button class="androidBtn" data-model="model3">Voir en 3D</button>
-        <button class="iosBtn" data-usdz="https://example-bucket.r2.cloudflarestorage.com/pizza_1.usdz">Voir en AR</button>
+    <section class="menu-section">
+      <h3>Pizzas</h3>
+      <div class="dish">
+        <img src="assets/placeholder.jpg" alt="Pizza">
+        <div class="dish-info">
+          <h4>Pizza Margherita</h4>
+          <div class="buttons">
+            <button onclick="view3D('assets/demo.glb')">Voir en 3D</button>
+            <button onclick="viewAR('assets/demo.usdz')">Voir en AR</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Burgers -->
-  <section>
-    <h2>Burgers</h2>
-    <div class="dish">
-      <h3>Burger Maison</h3>
-      <model-viewer id="model4"
-        src="https://example-bucket.r2.cloudflarestorage.com/burger_1.glb"
-        ios-src="https://example-bucket.r2.cloudflarestorage.com/burger_1.usdz"
-        camera-controls auto-rotate ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-      <div class="buttons">
-        <button class="androidBtn" data-model="model4">Voir en 3D</button>
-        <button class="iosBtn" data-usdz="https://example-bucket.r2.cloudflarestorage.com/burger_1.usdz">Voir en AR</button>
+    <section class="menu-section">
+      <h3>Burgers</h3>
+      <div class="dish">
+        <img src="assets/placeholder.jpg" alt="Burger">
+        <div class="dish-info">
+          <h4>Burger classique</h4>
+          <div class="buttons">
+            <button onclick="view3D('assets/demo.glb')">Voir en 3D</button>
+            <button onclick="viewAR('assets/demo.usdz')">Voir en AR</button>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Seb's Garden - Tous droits réservés</p>
+    © 2025 Seb’s Garden – Tous droits réservés
   </footer>
 
-  <!-- Smart device detection script -->
-  <script>
-  // Device detection
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  const isAndroid = /android/i.test(userAgent);
-  const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
-
-  // Loop through all dishes
-  document.querySelectorAll('.dish').forEach(dish => {
-    const androidBtn = dish.querySelector('.androidBtn');
-    const iosBtn = dish.querySelector('.iosBtn');
-    
-    if (isAndroid) {
-      iosBtn.style.display = 'none';
-      androidBtn.onclick = () => {
-        const modelId = androidBtn.getAttribute('data-model');
-        document.getElementById(modelId).scrollIntoView({ behavior: 'smooth' });
-      };
-    } else if (isIOS) {
-      androidBtn.style.display = 'none';
-      iosBtn.onclick = () => {
-        const usdz = iosBtn.getAttribute('data-usdz');
-        window.location.href = usdz;
-      };
-    } else {
-      // Desktop
-      iosBtn.style.display = 'none';
-      androidBtn.onclick = () => {
-        const modelId = androidBtn.getAttribute('data-model');
-        document.getElementById(modelId).scrollIntoView({ behavior: 'smooth' });
-      };
-    }
-  });
-  </script>
+  <script src="assets/script.js"></script>
 </body>
 </html>
-
