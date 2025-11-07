@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu 3D - Seb's Garden</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Nos plats en 3D</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="menu.html">Menu 3D</a>
+  </nav>
+
+  <section>
+    <h2>Entrées froides</h2>
+    <div class="model-container">
+      <model-viewer src="assets/entree_froide_1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+      <model-viewer src="assets/entree_froide_2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+    </div>
+  </section>
+
+  <section>
+    <h2>Entrées chaudes</h2>
+    <div class="model-container">
+      <model-viewer src="assets/entree_chaude_1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+      <model-viewer src="assets/entree_chaude_2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pizzas</h2>
+    <div class="model-container">
+      <model-viewer src="assets/pizza_1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+      <model-viewer src="assets/pizza_2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+    </div>
+  </section>
+
+  <section>
+    <h2>Burgers</h2>
+    <div class="model-container">
+      <model-viewer src="assets/burger_1.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+      <model-viewer src="assets/burger_2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate></model-viewer>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Seb's Garden - Tous droits réservés</p>
+  </footer>
+</body>
+</html>
