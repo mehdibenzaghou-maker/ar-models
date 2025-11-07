@@ -47,3 +47,35 @@ p{color:rgba(255,255,255,0.85);max-width:74ch}
   .menu-dropdown{top:64px}
   .items-grid{grid-template-columns:repeat(1,1fr)}
 }
+.dish {
+  margin-bottom: 60px;
+}
+
+model-viewer {
+  width: 280px;
+  height: 280px;
+  background-color: #142f4d;
+  border-radius: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #f5d76e;
+  color: #0a1a2f;
+  border: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: white;
+}
