@@ -1,33 +1,15 @@
-// Menu dropdown toggle + close on outside click + progressive enhancement for model-viewer data-src
-document.addEventListener('DOMContentLoaded', function(){
-  const menuBtn = document.getElementById('menuBtn');
-  const menuDropdown = document.getElementById('menuDropdown');
+function view3D(modelUrl) {
+  const viewer = document.createElement('model-viewer');
+  viewer.src = modelUrl;
+  viewer.style.width = '100%';
+  viewer.style.height = '400px';
+  viewer.setAttribute('camera-controls', '');
+  viewer.setAttribute('auto-rotate', '');
+  const popup = window.open('', '_blank');
+  popup.document.write('<title>Vue 3D</title>');
+  popup.document.body.appendChild(viewer);
+}
 
-  function openMenu(){
-    menuDropdown.setAttribute('aria-hidden','false');
-  }
-  function closeMenu(){
-    menuDropdown.setAttribute('aria-hidden','true');
-  }
-  menuBtn.addEventListener('click', function(e){
-    const hidden = menuDropdown.getAttribute('aria-hidden') === 'true';
-    if(hidden) openMenu(); else closeMenu();
-  });
-
-  // Close when clicking outside
-  document.addEventListener('click', function(e){
-    const target = e.target;
-    if(!menuDropdown.contains(target) && target !== menuBtn){
-      closeMenu();
-    }
-  });
-
-  // Progressive: if model-viewer elements have data-src attributes, move them to src so model-viewer loads them.
-  const viewers = document.querySelectorAll('model-viewer.model-viewer-placeholder');
-  viewers.forEach(v => {
-    const dataSrc = v.getAttribute('data-src');
-    const iosSrc = v.getAttribute('data-ios-src');
-    if(dataSrc) v.setAttribute('src', dataSrc);
-    if(iosSrc) v.setAttribute('ios-src', iosSrc);
-  });
-});
+function viewAR(modelUrl) {
+  window.open(modelUrl, '_blank');
+}
