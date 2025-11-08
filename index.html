@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sebs Garden</title>
+  <title>Sebs Garden - Menu</title>
 
-  <!-- Model-viewer library -->
+  <!-- Model-viewer for 3D/AR -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
   <!-- Stylesheet -->
@@ -20,7 +20,7 @@
     <section id="menu">
       <h2>Our Menu</h2>
 
-      <!-- Escalope Dorée dish with 3D preview -->
+      <!-- Dish: Escalope Dorée -->
       <div class="menu-item">
         <h3>Escalope Dorée</h3>
         <p>A succulent golden escalope served with seasonal vegetables and herb butter.</p>
@@ -28,15 +28,23 @@
         <model-viewer
           src="https://raw.githubusercontent.com/mehdibenzaghou-maker/ar-models/ae56ed66e6e1ca2c80ab68e675ba0e4474082041/AR-Code-1761838630115.glb"
           ios-src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/83.usdz"
-          alt="3D view of Escalope Dorée dish"
+          poster="escalope-placeholder.jpg"
+          alt="3D Escalope Dorée"
           ar
           ar-modes="scene-viewer quick-look webxr"
           camera-controls
           auto-rotate
           autoplay
-          style="width:100%; max-width:500px; height:350px; background-color:#f8f8f8; border-radius:12px;">
+          loading="lazy"
+          style="width:100%; max-width:500px; height:350px; border-radius:12px;">
           <button slot="ar-button">View in AR</button>
         </model-viewer>
+      </div>
+
+      <!-- Example additional dish -->
+      <div class="menu-item">
+        <h3>Risotto aux Champignons</h3>
+        <p>Creamy risotto with fresh mushrooms and parmesan.</p>
       </div>
 
     </section>
