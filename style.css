@@ -1,10 +1,10 @@
-/* Body & background */
+/* Body */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0D1B2A; /* Dark blue */
-  color: #FFD700; /* Golden text */
+  background-color: #0D1B2A; /* dark blue */
+  color: #FFD700; /* golden text */
 }
 
 /* Header */
@@ -37,7 +37,7 @@ main {
   color: #FFD700;
 }
 
-/* Menu item card */
+/* Menu item cards */
 .menu-item {
   display: flex;
   flex-direction: column;
