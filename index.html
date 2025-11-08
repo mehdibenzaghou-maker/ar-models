@@ -1,35 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seb’s Garden - Accueil</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sebs Garden</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
-<body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Seb’s Garden</h1>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="menu.html">Menu</a></li>
-      </ul>
+<body class="theme">
+  <header class="site-header">
+    <a href="#" class="brand">
+      <img src="assets/logo.svg" alt="Sebs Garden logo" class="logo">
+      <span class="name">Sebs Garden</span>
+    </a>
+    <nav>
+      <a href="#hero">Accueil</a>
+      <a href="#menu">Menu</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Bienvenue à Seb’s Garden</h2>
-      <p>Découvrez nos plats en 3D et vivez une expérience culinaire unique.</p>
-      <div class="buttons">
-        <a href="menu.html" class="btn">Découvrir le menu</a>
-        <a href="#" class="btn secondary">Nos plats en 3D</a>
-      </div>
-    </div>
-  </section>
+  <main class="container">
+    <section id="hero" class="hero">
+      <h1>Bienvenue chez Sebs Garden</h1>
+      <p class="lead">Une expérience culinaire moderne avec visualisation 3D et AR.</p>
+    </section>
 
-  <footer>
-    © 2025 Seb’s Garden – Tous droits réservés
-  </footer>
-</body>
-</html>
+    <section class="features">
+      <article>
+        <h3>Modèles 3D Intégrés
