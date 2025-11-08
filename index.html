@@ -54,7 +54,84 @@
         </div>
 
         <aside class="hero-card">
-          <!-- embedded SVG placeholder image -->
+          <!-- Dish item: Escalope Dorée -->
+<style>
+  /* Modern menu item style */
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #fff; /* clean white background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+
+  .menu-item h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    margin: 0 0 8px 0;
+    color: #333;
+  }
+
+  .menu-item p {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin: 0 0 16px 0;
+  }
+
+  .menu-item model-viewer {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    border-radius: 12px;
+    background-color: #f8f8f8;
+  }
+
+  .menu-item button[slot="ar-button"] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 14px;
+    background: #ff7f50; /* orange accent */
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+
+  .menu-item button[slot="ar-button"]:hover {
+    background: #ff6347; /* slightly darker on hover */
+  }
+</style>
+
+<div class="menu-item dish-escalope-doree">
+  <h3>Escalope Dorée</h3>
+  <p>A succulent golden escalope served with seasonal vegetables and herb butter.</p>
+  <!-- 3D model viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <model-viewer 
+    src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/83.usdz" 
+    ios-src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/83.usdz" 
+    alt="3D view of Escalope Dorée dish" 
+    ar ar-modes="scene-viewer quick-look webxr" 
+    camera-controls 
+    auto-rotate>
+    <button slot="ar-button">View in AR</button>
+  </model-viewer>
+</div>
+<!-- embedded SVG placeholder image -->
           <svg width="100%" height="240" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="border-radius:10px;display:block">
             <defs>
               <linearGradient id="g1" x1="0" x2="1">
