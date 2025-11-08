@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sebs Garden</title>
 
-  <!-- Google model-viewer library -->
+  <!-- Model-viewer library -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-  <!-- Link to CSS -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,13 +20,13 @@
     <section id="menu">
       <h2>Our Menu</h2>
 
-      <!-- Dish: Escalope Dorée -->
+      <!-- Escalope Dorée dish with 3D preview -->
       <div class="menu-item">
         <h3>Escalope Dorée</h3>
         <p>A succulent golden escalope served with seasonal vegetables and herb butter.</p>
 
         <model-viewer
-          src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/AR-Code-1761838630115.glb"
+          src="https://raw.githubusercontent.com/mehdibenzaghou-maker/ar-models/ae56ed66e6e1ca2c80ab68e675ba0e4474082041/AR-Code-1761838630115.glb"
           ios-src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/83.usdz"
           alt="3D view of Escalope Dorée dish"
           ar
@@ -37,12 +37,6 @@
           style="width:100%; max-width:500px; height:350px; background-color:#f8f8f8; border-radius:12px;">
           <button slot="ar-button">View in AR</button>
         </model-viewer>
-      </div>
-
-      <!-- Example additional dish -->
-      <div class="menu-item">
-        <h3>Risotto aux Champignons</h3>
-        <p>Creamy risotto with fresh mushrooms and parmesan.</p>
       </div>
 
     </section>
