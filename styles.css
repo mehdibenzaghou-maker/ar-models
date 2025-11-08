@@ -1,78 +1,88 @@
+/* Body & background */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #0D1B2A; /* Dark blue */
+  color: #FFD700; /* Golden text */
 }
 
+/* Header */
 header {
-  background-color: #222;
-  color: #fff;
+  background-color: #0D1B2A;
+  color: #FFD700;
   text-align: center;
-  padding: 20px 0;
+  padding: 25px 0;
+  border-bottom: 2px solid #FFD700;
 }
 
-h1 {
+header h1 {
+  font-size: 36px;
   margin: 0;
+  letter-spacing: 1px;
 }
 
+/* Main container */
 main {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
+/* Menu title */
 #menu h2 {
   text-align: center;
-  margin-bottom: 40px;
   font-size: 32px;
-  color: #444;
+  margin-bottom: 50px;
+  color: #FFD700;
 }
 
+/* Menu item card */
 .menu-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 25px;
   margin-bottom: 30px;
-  background-color: #fff;
+  background-color: #112B45; /* darker card background */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu-item:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
 
 .menu-item h3 {
   font-size: 24px;
   margin: 0 0 8px 0;
+  color: #FFD700;
 }
 
 .menu-item p {
   font-size: 16px;
   text-align: center;
-  color: #666;
+  color: #F0E68C;
   margin: 0 0 16px 0;
 }
 
+/* AR button */
 button[slot="ar-button"] {
   position: absolute;
   top: 10px;
   right: 10px;
   padding: 8px 14px;
-  background: #ff7f50;
+  background: #FFD700;
   border: none;
-  color: #fff;
+  color: #0D1B2A;
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 button[slot="ar-button"]:hover {
-  background: #ff6347;
+  background: #FFC300;
 }
