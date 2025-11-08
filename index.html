@@ -11,8 +11,17 @@
 <div class="wrap">
   <header>
     <div class="brand">
-      <h1>Sebs Garden</h1>
-      <div class="muted">Cuisine moderne & élégante</div>
+      <div class="logo">
+        <!-- Sebs Garden logo (gold 5 as example placeholder) -->
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" fill="#FFD700"/>
+          <text x="32" y="42" text-anchor="middle" fill="#001f3f" font-size="32" font-family="Arial, sans-serif" font-weight="bold">SG</text>
+        </svg>
+      </div>
+      <div>
+        <h1>Sebs Garden</h1>
+        <div class="muted" style="font-size:13px">Cuisine moderne & élégante</div>
+      </div>
     </div>
     <nav>
       <a href="#menu">Menu</a>
@@ -32,6 +41,14 @@
           <button class="btn btn-ghost">Voir le menu</button>
         </div>
       </div>
+
+      <aside class="hero-card">
+        <svg width="100%" height="240" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="border-radius:10px;display:block">
+          <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0%" stop-color="#001f3f"/><stop offset="100%" stop-color="#003366"/></linearGradient></defs>
+          <rect width="800" height="400" fill="url(#g1)" rx="10" />
+          <text x="50" y="220" fill="#FFD700" font-size="24">Exemple visuel</text>
+        </svg>
+      </aside>
     </section>
 
     <section id="menu">
@@ -40,65 +57,4 @@
     </section>
 
     <section id="nos-plats-en-3d">
-      <h3 class="section-title">Nos plats en 3D</h3>
-      <p class="muted">Visualisez un exemple 3D. Tapotez le modèle pour lancer la vue AR sur appareils compatibles.</p>
-      <div class="card center" style="padding:20px">
-        <model-viewer id="mv"
-          src="models/placeholder.glb"
-          ios-src="models/placeholder.usdz"
-          alt="Modèle d'exemple"
-          ar
-          ar-modes="webxr scene-viewer quick-look"
-          environment-image="neutral"
-          exposure="1"
-          camera-controls
-          touch-action="pan-y"
-          style="width:320px;height:320px;max-width:100%;background:transparent;border-radius:12px">
-        </model-viewer>
-      </div>
-    </section>
-
-    <section id="about">
-      <h3 class="section-title">À propos de Sebs Garden</h3>
-      <div class="two-col" style="margin-top:12px">
-        <div class="card">
-          <h4 style="margin-top:0;color:#fff">Notre concept</h4>
-          <p class="muted">Cuisine moderne et créative dans un cadre élégant et convivial.</p>
-        </div>
-        <div class="card">
-          <h4 style="margin-top:0;color:#fff">Pourquoi nous choisir ?</h4>
-          <ul class="muted">
-            <li>Ingrédients frais et de qualité</li>
-            <li>Plats innovants et artistiques</li>
-            <li>Expérience gastronomique unique</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h3 class="section-title">Contact & localisation</h3>
-      <div class="two-col" style="margin-top:12px">
-        <div class="card">
-          <h4 style="margin:0;color:#fff">Nous contacter</h4>
-          <p class="muted">Tél : +33 1 23 45 67 89<br>Email : hello@sebs.example</p>
-        </div>
-        <div class="card center">
-          <h4 style="margin:0;color:#fff">Nous trouver</h4>
-          <p class="muted">Adresse exemple, Paris</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-      <div>© <strong>Sebs Garden</strong> — Tous droits réservés.</div>
-      <div class="muted">Template prêt pour GitHub Pages.</div>
-    </div>
-  </footer>
-</div>
-<script src="script.js"></script>
-</body>
-</html>
+      <h
