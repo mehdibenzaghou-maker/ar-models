@@ -1,12 +1,13 @@
-/* Dark blue background + golden accents */
+/* Body & background */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #0D1B2A; /* dark blue */
-  color: #FFD700; /* golden text */
+  background-color: #0D1B2A; /* Dark blue */
+  color: #FFD700; /* Golden text */
 }
 
+/* Header */
 header {
   background-color: #0D1B2A;
   color: #FFD700;
@@ -21,12 +22,14 @@ header h1 {
   letter-spacing: 1px;
 }
 
+/* Main container */
 main {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
+/* Menu title */
 #menu h2 {
   text-align: center;
   font-size: 32px;
@@ -41,7 +44,7 @@ main {
   align-items: center;
   padding: 25px;
   margin-bottom: 30px;
-  background-color: #112B45; /* darker card bg */
+  background-color: #112B45; /* darker card background */
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -65,6 +68,7 @@ main {
   margin: 0 0 16px 0;
 }
 
+/* AR button */
 button[slot="ar-button"] {
   position: absolute;
   top: 10px;
