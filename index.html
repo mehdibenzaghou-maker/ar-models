@@ -1,439 +1,104 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Seb's Garden — Menu 3D</title>
-
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Model Viewer (Google) - will enable web and iOS AR -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sebs Garden — Restaurant Moderne</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <div class="brand">
-        <div class="logo">Seb's Garden</div>
-      </div>
-      <nav class="nav">
-        <button id="menuBtn" class="nav-btn">Menu</button>
-      </nav>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <h1>Sebs Garden</h1>
+      <div class="muted">Cuisine moderne & élégante</div>
     </div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Contact</a>
+      <a href="#reserve" class="cta">Réserver</a>
+    </nav>
   </header>
 
-  <!-- Dropdown menu -->
-  <div id="menuDropdown" class="menu-dropdown" aria-hidden="true">
-    <div class="menu-content container">
-      <h2>Notre Menu</h2>
-
-      <section class="menu-section">
-        <h3>Entrées froides <span class="count">8</span></h3>
-        <div class="items-grid" id="entrees-froides">
-          <!-- 8 placeholders -->
-                    <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <!-- Replace data-src / data-ios-src with your .glb and .usdz file paths -->
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <!-- Fallback overlay -->
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <!-- Replace data-src / data-ios-src with your .glb and .usdz file paths -->
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <!-- Fallback overlay -->
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <!-- Replace data-src / data-ios-src with your .glb and .usdz file paths -->
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <!-- Fallback overlay -->
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <!-- Replace data-src / data-ios-src with your .glb and .usdz file paths -->
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <!-- Fallback overlay -->
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <!-- Replace data-src / data-ios-src with your .glb and .usdz file paths -->
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <!-- Fallback overlay -->
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <!-- Replace data-src / data-ios-src with your .glb and .usdz file paths -->
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <!-- Fallback overlay -->
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <!-- Replace data-src / data-ios-src with your .glb and .usdz file paths -->
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <!-- Fallback overlay -->
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <!-- Replace data-src / data-ios-src with your .glb and .usdz file paths -->
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <!-- Fallback overlay -->
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <h2 class="fade-up">Bienvenue chez <strong style="color:#FFD700">Sebs Garden</strong></h2>
+        <p class="lead">Un restaurant moderne offrant des plats créatifs et un cadre élégant.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary">Réserver une table</button>
+          <button class="btn btn-ghost">Voir le menu</button>
         </div>
-      </section>
-
-      <section class="menu-section">
-        <h3>Entrées chaudes <span class="count">7</span></h3>
-        <div class="items-grid" id="entrees-chaudes">
-                    <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="menu-section">
-        <h3>Nos spécialités camemberts <span class="count">4</span></h3>
-        <div class="items-grid" id="camemberts">
-                    <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-          <article class="dish">
-            <div class="dish-info">
-              <h4 class="dish-name">–</h4>
-            </div>
-            <div class="viewer-wrap">
-              <model-viewer class="model-viewer-placeholder"
-                data-src=""
-                data-ios-src=""
-                alt="Place holder 3D"
-                camera-controls
-                ar
-                ar-modes="webxr scene-viewer quick-look">
-                <div class="overlay">
-                  <img src="assets/placeholder.svg" alt="3D placeholder">
-                  <div class="overlay-text">Ajouter .glb / .usdz</div>
-                </div>
-              </model-viewer>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <div class="menu-footer">
-        <small>Tous les emplacements sont vides — ajoutez vos fichiers 3D (.glb pour Android, .usdz pour iOS) et les noms des plats.</small>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <main class="main container">
-    <h1>Bienvenue à Seb's Garden</h1>
-    <p>Site démo — menu 3D prêt pour GitHub. Cliquez sur <strong>Menu</strong> pour ouvrir le panneau.</p>
+    <section id="menu">
+      <h3 class="section-title">Notre carte</h3>
+      <p class="muted">La carte complète arrivera bientôt — <em>À venir</em>.</p>
+    </section>
+
+    <section id="nos-plats-en-3d">
+      <h3 class="section-title">Nos plats en 3D</h3>
+      <p class="muted">Visualisez un exemple 3D. Tapotez le modèle pour lancer la vue AR sur appareils compatibles.</p>
+      <div class="card center" style="padding:20px">
+        <model-viewer id="mv"
+          src="models/placeholder.glb"
+          ios-src="models/placeholder.usdz"
+          alt="Modèle d'exemple"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          environment-image="neutral"
+          exposure="1"
+          camera-controls
+          touch-action="pan-y"
+          style="width:320px;height:320px;max-width:100%;background:transparent;border-radius:12px">
+        </model-viewer>
+      </div>
+    </section>
+
+    <section id="about">
+      <h3 class="section-title">À propos de Sebs Garden</h3>
+      <div class="two-col" style="margin-top:12px">
+        <div class="card">
+          <h4 style="margin-top:0;color:#fff">Notre concept</h4>
+          <p class="muted">Cuisine moderne et créative dans un cadre élégant et convivial.</p>
+        </div>
+        <div class="card">
+          <h4 style="margin-top:0;color:#fff">Pourquoi nous choisir ?</h4>
+          <ul class="muted">
+            <li>Ingrédients frais et de qualité</li>
+            <li>Plats innovants et artistiques</li>
+            <li>Expérience gastronomique unique</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3 class="section-title">Contact & localisation</h3>
+      <div class="two-col" style="margin-top:12px">
+        <div class="card">
+          <h4 style="margin:0;color:#fff">Nous contacter</h4>
+          <p class="muted">Tél : +33 1 23 45 67 89<br>Email : hello@sebs.example</p>
+        </div>
+        <div class="card center">
+          <h4 style="margin:0;color:#fff">Nous trouver</h4>
+          <p class="muted">Adresse exemple, Paris</p>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <script src="script.js"></script>
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+      <div>© <strong>Sebs Garden</strong> — Tous droits réservés.</div>
+      <div class="muted">Template prêt pour GitHub Pages.</div>
+    </div>
+  </footer>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
