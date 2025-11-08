@@ -1,3 +1,4 @@
+/* General body styling */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -6,6 +7,7 @@ body {
   color: #333;
 }
 
+/* Header */
 header {
   background-color: #222;
   color: #fff;
@@ -13,10 +15,7 @@ header {
   padding: 20px 0;
 }
 
-h1 {
-  margin: 0;
-}
-
+/* Main section */
 main {
   max-width: 1000px;
   margin: 40px auto;
@@ -27,9 +26,9 @@ main {
   text-align: center;
   margin-bottom: 40px;
   font-size: 32px;
-  color: #444;
 }
 
+/* Menu item styling */
 .menu-item {
   display: flex;
   flex-direction: column;
@@ -59,6 +58,7 @@ main {
   margin: 0 0 16px 0;
 }
 
+/* AR button styling */
 button[slot="ar-button"] {
   position: absolute;
   top: 10px;
