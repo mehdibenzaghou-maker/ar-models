@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sebs Garden Menu</title>
+  <title>Sebs Garden</title>
 
-  <!-- Google model-viewer for 3D and AR -->
+  <!-- Model-viewer library for 3D and AR -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-  <!-- Stylesheet -->
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,4 +18,27 @@
 
   <main>
     <section id="menu">
-      <h2>
+      <h2>Our Menu</h2>
+
+      <!-- Dish: Escalope Dorée with 3D preview -->
+      <div class="menu-item">
+        <h3>Escalope Dorée</h3>
+        <p>A succulent golden escalope served with seasonal vegetables and herb butter.</p>
+        <model-viewer
+          src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/83.usdz"
+          ios-src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/83.usdz"
+          alt="3D view of Escalope Dorée dish"
+          ar
+          ar-modes="scene-viewer quick-look webxr"
+          camera-controls
+          auto-rotate
+          autoplay
+          style="width:100%; max-width:500px; height:350px; background-color:#f8f8f8; border-radius:12px;">
+          <button slot="ar-button">View in AR</button>
+        </model-viewer>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
