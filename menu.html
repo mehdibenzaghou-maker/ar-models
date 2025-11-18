@@ -5,12 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu - L'empire Kebab & Grill</title>
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google model-viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
+
 <body>
 
 <header class="hero small">
-  <h1 class="logo small"><span class="yellow">L'empire</span> <span class="white">kebab & grill</span></h1>
+  <h1 class="logo small">
+    <span class="yellow">L'empire</span>
+    <span class="white">kebab & grill</span>
+  </h1>
 </header>
 
 <nav class="nav">
@@ -19,39 +25,93 @@
   <a href="contact.html">Contact</a>
 </nav>
 
+
+<!-- 1 - PAIN PITA -->
 <section class="menu-section">
   <h2>Pain Pita</h2>
   <div class="grid">
+
     <div class="dish">
-      <model-viewer src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Bcrevette.glb" ios-src="models/pita1.usdz" auto-rotate camera-controls></model-viewer>
+      <model-viewer src="models/pita1.glb" ios-src="models/pita1.usdz"
+        auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
       <p>Pita 1</p>
     </div>
+
     <div class="dish">
-      <model-viewer src="models/pita2.glb" ios-src="models/pita2.usdz" auto-rotate camera-controls></model-viewer>
+      <model-viewer src="models/pita2.glb" ios-src="models/pita2.usdz"
+        auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
       <p>Pita 2</p>
     </div>
+
     <div class="dish">
-      <model-viewer src="models/pita3.glb" ios-src="models/pita3.usdz" auto-rotate camera-controls></model-viewer>
+      <model-viewer src="models/pita3.glb" ios-src="models/pita3.usdz"
+        auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
       <p>Pita 3</p>
     </div>
+
   </div>
 </section>
 
+
+<!-- 2 - PAIN LIBANAIS -->
 <section class="menu-section">
   <h2>Pain Libanais</h2>
   <div class="grid">
-    <div class="dish"><model-viewer src="models/lib1.glb" ios-src="models/lib1.usdz" auto-rotate camera-controls></model-viewer><p>Libanais 1</p></div>
-    <div class="dish"><model-viewer src="models/lib2.glb" ios-src="models/lib2.usdz" auto-rotate camera-controls></model-viewer><p>Libanais 2</p></div>
-    <div class="dish"><model-viewer src="models/lib3.glb" ios-src="models/lib3.usdz" auto-rotate camera-controls></model-viewer><p>Libanais 3</p></div>
+
+    <div class="dish">
+      <model-viewer src="models/lib1.glb" ios-src="models/lib1.usdz"
+        auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
+      <p>Libanais 1</p>
+    </div>
+
+    <div class="dish">
+      <model-viewer src="models/lib2.glb" ios-src="models/lib2.usdz"
+        auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
+      <p>Libanais 2</p>
+    </div>
+
+    <div class="dish">
+      <model-viewer src="models/lib3.glb" ios-src="models/lib3.usdz"
+        auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
+      <p>Libanais 3</p>
+    </div>
+
   </div>
 </section>
 
+
+<!-- 3 - NOS PLATS -->
 <section class="menu-section">
   <h2>Nos plats</h2>
   <div class="grid">
-    <div class="dish"><model-viewer src="models/plat1.glb" ios-src="models/plat1.usdz" auto-rotate camera-controls></model-viewer><p>Plat 1</p></div>
-    <div class="dish"><model-viewer src="models/plat2.glb" ios-src="models/plat2.usdz" auto-rotate camera-controls></model-viewer><p>Plat 2</p></div>
-    <div class="dish"><model-viewer src="models/plat3.glb" ios-src="models/plat3.usdz" auto-rotate camera-controls></model-viewer><p>Plat 3</p></div>
+
+    <div class="dish">
+      <model-viewer src="models/plat1.glb" ios-src="models/plat1.usdz"
+        auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
+      <p>Plat 1</p>
+    </div>
+
+    <div class="dish">
+      <model-viewer src="models/plat2.glb" ios-src="models/plat2.usdz"
+        auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
+      <p>Plat 2</p>
+    </div>
+
+    <div class="dish">
+      <model-viewer src="models/plat3.glb" ios-src="models/plat3.usdz"
+        auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
+      </model-viewer>
+      <p>Plat 3</p>
+    </div>
+
   </div>
 </section>
 
