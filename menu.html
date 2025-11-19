@@ -4,50 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu - L'empire Kebab & Grill</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <link rel="stylesheet" href="style.css">
 
-  <!-- Google model-viewer -->
+  <!-- Google Model Viewer -->
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body class="fire-bg">
 
-<header class="hero small">
-  <h1 class="logo small">
-    <span class="yellow">L'empire</span>
-    <span class="white">kebab & grill</span>
-  </h1>
+<!-- HEADER WITH LOGO -->
+<header class="header">
+  <div class="logo-box">
+    <h1 class="logo-title">L'empire <span class="fire">🔥</span></h1>
+    <p class="logo-sub">kebab & grill</p>
+  </div>
+
+  <!-- Socials -->
+  <div class="socials">
+    <a id="instaLink" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a id="fbLink" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+  </div>
 </header>
 
+<!-- NAVIGATION -->
 <nav class="nav">
   <a class="btn" href="index.html">Accueil</a>
-  <a class="btn" href="menu.html">Menu</a>
+  <a class="btn active" href="menu.html">Menu</a>
   <a class="btn" href="contact.html">Contact</a>
 </nav>
+
+<!-- CONTACT INFO (OPTIONAL ON MENU PAGE) -->
+<div class="contact" style="margin-top:20px;">
+  <p><i class="fa-solid fa-phone"></i> <span id="phoneNumber">Votre numéro ici</span></p>
+  <p><i class="fa-solid fa-envelope"></i> <span id="emailAddress">Votre email ici</span></p>
+</div>
+
+
+<!-- --------------------- -->
+<!--       MENU SECTIONS   -->
+<!-- --------------------- -->
 
 
 <!-- SECTION 1 - PAIN PITA -->
 <section class="menu-section">
-  <h2>Pain Pita</h2>
+  <h2 class="menu-title">Pain Pita</h2>
 
   <div class="dish">
     <model-viewer src="models/pita1.glb" ios-src="models/pita1.usdz"
-      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
-    </model-viewer>
+      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
     <p>Pita 1</p>
   </div>
 
   <div class="dish">
     <model-viewer src="models/pita2.glb" ios-src="models/pita2.usdz"
-      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
-    </model-viewer>
+      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
     <p>Pita 2</p>
   </div>
 
   <div class="dish">
     <model-viewer src="models/pita3.glb" ios-src="models/pita3.usdz"
-      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
-    </model-viewer>
+      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
     <p>Pita 3</p>
   </div>
 </section>
@@ -55,26 +78,23 @@
 
 <!-- SECTION 2 - PAIN LIBANAIS -->
 <section class="menu-section">
-  <h2>Pain Libanais</h2>
+  <h2 class="menu-title">Pain Libanais</h2>
 
   <div class="dish">
     <model-viewer src="models/lib1.glb" ios-src="models/lib1.usdz"
-      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
-    </model-viewer>
+      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
     <p>Libanais 1</p>
   </div>
 
   <div class="dish">
     <model-viewer src="models/lib2.glb" ios-src="models/lib2.usdz"
-      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
-    </model-viewer>
+      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
     <p>Libanais 2</p>
   </div>
 
   <div class="dish">
     <model-viewer src="models/lib3.glb" ios-src="models/lib3.usdz"
-      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
-    </model-viewer>
+      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
     <p>Libanais 3</p>
   </div>
 </section>
@@ -82,30 +102,32 @@
 
 <!-- SECTION 3 - NOS PLATS -->
 <section class="menu-section">
-  <h2>Nos Plats</h2>
+  <h2 class="menu-title">Nos Plats</h2>
 
   <div class="dish">
     <model-viewer src="models/plat1.glb" ios-src="models/plat1.usdz"
-      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
-    </model-viewer>
+      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
     <p>Plat 1</p>
   </div>
 
   <div class="dish">
     <model-viewer src="models/plat2.glb" ios-src="models/plat2.usdz"
-      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
-    </model-viewer>
+      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
     <p>Plat 2</p>
   </div>
 
   <div class="dish">
     <model-viewer src="models/plat3.glb" ios-src="models/plat3.usdz"
-      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look">
-    </model-viewer>
+      auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
     <p>Plat 3</p>
   </div>
-
 </section>
+
+
+<!-- FOOTER -->
+<footer>
+  © 2025 — L’empire — Tous droits réservés
+</footer>
 
 </body>
 </html>
