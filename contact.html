@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - L'empire Kebab & Grill</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – L'empire Kebab & Grill</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="fire-bg">
+<body>
 
-<header class="hero small">
-  <h1 class="logo small">
-    <span class="yellow">L'empire</span>
-    <span class="white">kebab & grill</span>
-  </h1>
+<header class="header">
+    <div class="logo-box">
+        <h1 class="logo-title">L'empire <span class="fire">🔥</span></h1>
+        <p class="logo-sub">kebab & grill</p>
+    </div>
 </header>
 
 <nav class="nav">
   <a class="btn" href="index.html">Accueil</a>
   <a class="btn" href="menu.html">Menu</a>
-  <a class="btn" href="contact.html">Contact</a>
+  <a class="btn active" href="contact.html">Contact</a>
 </nav>
 
-<section class="contact">
-  <h2>Contact</h2>
-
-  <p class="placeholder">Ajoute ici le numéro, l’adresse et les horaires…</p>
-
-  <h3>Localisation</h3>
-
-  <div class="map-placeholder">
-    Colle ici ton Google Maps embed
-  </div>
+<section class="contact" style="font-size:22px; margin-top:40px;">
+    <p><i class="fa-solid fa-phone"></i> <span id="phoneNumber">Votre numéro ici</span></p>
+    <p><i class="fa-solid fa-envelope"></i> <span id="emailAddress">Votre email ici</span></p>
 </section>
+
+<footer>
+  © 2025 — L’empire — Tous droits réservés
+</footer>
 
 </body>
 </html>
