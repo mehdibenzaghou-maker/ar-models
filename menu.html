@@ -3,13 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu - L'empire Kebab & Grill</title>
+  <title>Menu 3D - L'empire Kebab & Grill</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
+  <style>
+    .ar-instruction {
+      background: rgba(255, 221, 51, 0.1);
+      border: 2px solid #ffdd33;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: center;
+      font-size: 18px;
+    }
+    
+    .ar-instruction i {
+      color: #ffdd33;
+      margin-right: 10px;
+    }
+    
+    .dish {
+      position: relative;
+      margin-bottom: 45px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .dish:hover {
+      background: rgba(255, 221, 51, 0.1);
+      transform: translateY(-5px);
+      border-color: #ffdd33;
+    }
+    
+    .dish-info {
+      margin-top: 15px;
+    }
+    
+    .dish-name {
+      font-size: 24px;
+      font-weight: 600;
+      color: #ffdd33;
+      margin-bottom: 10px;
+    }
+    
+    .dish-prices {
+      font-size: 18px;
+      color: white;
+    }
+    
+    .price-item {
+      margin: 5px 0;
+    }
+    
+    .ar-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff6b35;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 15px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    
+    .ar-fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 1000;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .ar-fullscreen.active {
+      display: flex;
+    }
+    
+    .ar-fullscreen model-viewer {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .close-ar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #ffdd33;
+      color: black;
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  </style>
 </head>
 
 <body>
@@ -32,35 +136,75 @@
   <p><i class="fa-solid fa-envelope"></i> <span id="emailAddress">Islemamara16@gmail.com</span></p>
 </div>
 
+<div class="ar-instruction">
+  <p><i class="fas fa-mobile-alt"></i> <strong>Comment voir en AR :</strong> Cliquez sur un modèle 3D puis sur l'icône AR pour voir dans votre espace !</p>
+</div>
+
 <section class="menu-section">
   <h2 class="menu-title">Pain Pita</h2>
 
   <div class="dish">
+    <span class="ar-badge">AR DISPONIBLE</span>
     <model-viewer 
-      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pita%20poulet.glb" ios-src="models/pita1.usdz" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-    <model-viewer
-                        ar
-                        ar-modes="webxr scene-viewer quick-look"
-                        environment-image="neutral"
-                        auto-rotate
-                        camera-controls>
-    <p>Poulet</p>
-    <p>Classique : 400 DA</p>
-   <p>Gourmand : 550 DA</p>
+      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pita%20poulet.glb"
+      alt="Pita Poulet"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      shadow-intensity="1"
+      style="width: 100%; height: 300px; border-radius: 12px;">
+    </model-viewer>
+    <div class="dish-info">
+      <div class="dish-name">Poulet</div>
+      <div class="dish-prices">
+        <div class="price-item">Classique : 400 DA</div>
+        <div class="price-item">Gourmand : 550 DA</div>
+      </div>
+    </div>
   </div>
 
   <div class="dish">
-    <model-viewer src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/pita%20viande.glb" ios-src="models/pita2.usdz" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-    <p>Viande</p>
-    <p>Classique : 600 DA</p>
-    <p>Gourmand : 800 DA</p>
+    <span class="ar-badge">AR DISPONIBLE</span>
+    <model-viewer 
+      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/pita%20viande.glb"
+      alt="Pita Viande"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      style="width: 100%; height: 300px; border-radius: 12px;">
+    </model-viewer>
+    <div class="dish-info">
+      <div class="dish-name">Viande</div>
+      <div class="dish-prices">
+        <div class="price-item">Classique : 600 DA</div>
+        <div class="price-item">Gourmand : 800 DA</div>
+      </div>
+    </div>
   </div>
 
   <div class="dish">
-    <model-viewer src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pita%20mixte.glb" ios-src="models/pita3.usdz" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-    <p>Mixte</p>
-    <p>Classique : 550 DA</p>
-    <p>Gourmand : 700 DA</p>
+    <span class="ar-badge">AR DISPONIBLE</span>
+    <model-viewer 
+      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Pita%20mixte.glb"
+      alt="Pita Mixte"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      style="width: 100%; height: 300px; border-radius: 12px;">
+    </model-viewer>
+    <div class="dish-info">
+      <div class="dish-name">Mixte</div>
+      <div class="dish-prices">
+        <div class="price-item">Classique : 550 DA</div>
+        <div class="price-item">Gourmand : 700 DA</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -68,24 +212,66 @@
   <h2 class="menu-title">Pain Libanais</h2>
 
   <div class="dish">
-    <model-viewer src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/pita%20poulet.glb" ios-src="models/lib1.usdz" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-    <p>Poulet</p>
-      <p>Classique : 400 DA</p>
-   <p>Gourmand : 550 DA</p>
+    <span class="ar-badge">AR DISPONIBLE</span>
+    <model-viewer 
+      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/pita%20poulet.glb"
+      alt="Libanais Poulet"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      style="width: 100%; height: 300px; border-radius: 12px;">
+    </model-viewer>
+    <div class="dish-info">
+      <div class="dish-name">Poulet</div>
+      <div class="dish-prices">
+        <div class="price-item">Classique : 400 DA</div>
+        <div class="price-item">Gourmand : 550 DA</div>
+      </div>
+    </div>
   </div>
 
   <div class="dish">
-    <model-viewer src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/libanais%20viande.glb" ios-src="models/lib2.usdz" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-    <p>Viande</p>
-    <p>Classique : 600 DA</p>
-    <p>Gourmand : 800 DA</p>
+    <span class="ar-badge">AR DISPONIBLE</span>
+    <model-viewer 
+      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/libanais%20viande.glb"
+      alt="Libanais Viande"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      style="width: 100%; height: 300px; border-radius: 12px;">
+    </model-viewer>
+    <div class="dish-info">
+      <div class="dish-name">Viande</div>
+      <div class="dish-prices">
+        <div class="price-item">Classique : 600 DA</div>
+        <div class="price-item">Gourmand : 800 DA</div>
+      </div>
+    </div>
   </div>
 
   <div class="dish">
-    <model-viewer src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Libanais%20mixte.glb" ios-src="models/lib3.usdz" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-    <p>Mixte</p>
-      <p>Classique : 550 DA</p>
-    <p>Gourmand : 700 DA</p>
+    <span class="ar-badge">AR DISPONIBLE</span>
+    <model-viewer 
+      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Libanais%20mixte.glb"
+      alt="Libanais Mixte"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      style="width: 100%; height: 300px; border-radius: 12px;">
+    </model-viewer>
+    <div class="dish-info">
+      <div class="dish-name">Mixte</div>
+      <div class="dish-prices">
+        <div class="price-item">Classique : 550 DA</div>
+        <div class="price-item">Gourmand : 700 DA</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -93,26 +279,68 @@
   <h2 class="menu-title">Nos Plats</h2>
 
   <div class="dish">
-    <model-viewer src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Plat%20poulet.glb" ios-src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Plat%20poulet.glb" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-    <p>Poulet</p>
-    <p>800 DA</p>
+    <span class="ar-badge">AR DISPONIBLE</span>
+    <model-viewer 
+      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Plat%20poulet.glb"
+      alt="Plat Poulet"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      style="width: 100%; height: 300px; border-radius: 12px;">
+    </model-viewer>
+    <div class="dish-info">
+      <div class="dish-name">Poulet</div>
+      <div class="dish-prices">
+        <div class="price-item">800 DA</div>
+      </div>
+    </div>
   </div>
 
   <div class="dish">
-    <model-viewer src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Plat%20viande.glb" ios-src="models/plat2.usdz" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-    <p>Viande</p>
-    <p>1200 DA</p>
+    <span class="ar-badge">AR DISPONIBLE</span>
+    <model-viewer 
+      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Plat%20viande.glb"
+      alt="Plat Viande"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      style="width: 100%; height: 300px; border-radius: 12px;">
+    </model-viewer>
+    <div class="dish-info">
+      <div class="dish-name">Viande</div>
+      <div class="dish-prices">
+        <div class="price-item">1200 DA</div>
+      </div>
+    </div>
   </div>
 
   <div class="dish">
-    <model-viewer src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Plat%20mixte.glb" ios-src="models/plat3.usdz" auto-rotate camera-controls ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
-   <p>Mixte</p>
-    <p>1000 Da</p>
+    <span class="ar-badge">AR DISPONIBLE</span>
+    <model-viewer 
+      src="https://pub-72b1924cc2494065a2af6bf69f360686.r2.dev/Plat%20mixte.glb"
+      alt="Plat Mixte"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      environment-image="neutral"
+      style="width: 100%; height: 300px; border-radius: 12px;">
+    </model-viewer>
+    <div class="dish-info">
+      <div class="dish-name">Mixte</div>
+      <div class="dish-prices">
+        <div class="price-item">1000 DA</div>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
-  © 2025 — L’empire — Tous droits réservés
+  © 2025 — L'empire — Tous droits réservés
 </footer>
 
 </body>
