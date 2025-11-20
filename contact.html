@@ -3,85 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - L'Empire Kebab & Grill</title>
+    <title>Contact – L'empire Kebab & Grill</title>
 
-    <style>
-        body {
-            margin: 0;
-            background: #0d0d0d;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-
-        .logo {
-            margin-top: 30px;
-        }
-        .logo .main {
-            font-size: 42px;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-        .logo .sub {
-            font-size: 18px;
-            font-weight: 600;
-            color: #f7d200;
-            margin-top: -10px;
-        }
-
-        nav {
-            margin: 30px 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            background: #f7d200;
-            color: black;
-            padding: 12px 22px;
-            margin: 6px;
-            border-radius: 8px;
-            font-weight: bold;
-            display: inline-block;
-        }
-
-        .info {
-            margin-top: 40px;
-            font-size: 20px;
-        }
-
-        .socials img {
-            width: 45px;
-            margin: 10px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="logo">
-    <div class="main">L’EMPIRE</div>
-    <div class="sub">Kebab & Grill</div>
-</div>
+<header class="header">
+    <div class="logo-box">
+        <h1 class="logo-title">L'empire <span class="fire">🔥</span></h1>
+        <p class="logo-sub">kebab & grill</p>
+    </div>
+</header>
 
-<nav>
-    <a href="index.html">Accueil</a>
-    <a href="menu.html">Menu</a>
-    <a href="contact.html">Contact</a>
+<nav class="nav">
+  <a class="btn" href="index.html">Accueil</a>
+  <a class="btn" href="menu.html">Menu</a>
+  <a class="btn active" href="contact.html">Contact</a>
 </nav>
 
-<h2 style="color:#f7d200;">Contact</h2>
+<section class="contact" style="font-size:22px; margin-top:40px;">
+    <p><i class="fa-solid fa-phone"></i> <span id="phoneNumber">Votre numéro ici</span></p>
+    <p><i class="fa-solid fa-envelope"></i> <span id="emailAddress">Votre email ici</span></p>
+</section>
 
-<div class="info">
-    <p><strong>Téléphone :</strong> 
-        <a href="tel:0556800263" style="color:#f7d200; text-decoration:none;">
-            0556 80 02 63
-        </a>
-    </p>
-
-    <p>Instagram :</p>
-    <a href="https://www.instagram.com/lempire_kebab13?igsh=MXRveGdvcWpnZDJlbA==" target="_blank">
-        <img src="instagram.png" alt="Instagram">
-    </a>
-</div>
+<footer>
+  © 2025 — L’empire — Tous droits réservés
+</footer>
 
 </body>
 </html>
