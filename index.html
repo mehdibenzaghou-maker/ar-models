@@ -1,50 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>L'empire - Kebab & Grill</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Empire Kebab & Grill</title>
+    <style>
+        body {
+            margin: 0;
+            background: #111;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+        header {
+            padding: 20px;
+            background: #000;
+        }
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        header img {
+            width: 180px;
+        }
 
-    <link rel="stylesheet" href="style.css" />
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background: #ffcc00;
+            padding: 10px 18px;
+            border-radius: 8px;
+            margin: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .socials img {
+            width: 40px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-<header class="header">
-    <div class="logo-box">
-        <h1 class="logo-title">L'empire <span class="fire">🔥</span></h1>
-        <p class="logo-sub">kebab & grill</p>
-    </div>
-
-    <div class="socials">
-        <a id="https://www.instagram.com/lempire_kebab13?igsh=MXRveGdvcWpnZDJlbA==" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a id="fbLink" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-    </div>
+<header>
+    <img src="logo.png" alt="L'Empire Kebab & Grill">
 </header>
 
-<nav class="nav">
-  <a class="btn active" href="index.html">Accueil</a>
-  <a class="btn" href="menu.html">Menu</a>
-  <a class="btn" href="contact.html">Contact</a>
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
-<section class="contact">
-    <p><i class="fa-solid fa-phone"></i> <span id="phoneNumber">Votre numéro ici</span></p>
-    <p><i class="fa-solid fa-envelope"></i> <span id="emailAddress">Votre email ici</span></p>
-</section>
+<h2>Bienvenue à L'Empire Kebab & Grill</h2>
+<p>Le meilleur kebab de la région, qualité impériale.</p>
 
-<section class="menu-section">
-    <a href="menu.html" class="menu-btn">MENU</a>
-</section>
-
-<footer>
-    © 2025 — L’empire — Tous droits réservés
-</footer>
+<div class="socials">
+    <!-- ICONES A REMPLACER PAR TES FICHIERS PNG -->
+    <a href="https://www.instagram.com/lempire_kebab13?igsh=MXRveGdvcWpnZDJlbA==" target="_blank">
+        <img src="instagram.png" alt="Instagram">
+    </a>
+    <a href="#" onclick="alert('Facebook n’a pas encore été ajouté !');">
+        <img src="facebook.png" alt="Facebook">
+    </a>
+</div>
 
 </body>
 </html>
